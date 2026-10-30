@@ -1,5 +1,5 @@
 [versions]
-paper-api = "1.20.6-R0.1-SNAPSHOT"
+paper-api = "26.3.build.226-stable"
 paper-run = "1.21.11"
 commandapi = "12.1.0"
 flyway = "13.3.0"
