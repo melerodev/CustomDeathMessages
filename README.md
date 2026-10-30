@@ -1,96 +1,96 @@
 <h1 align="center">CustomDeathMessages</h1>
 <p align="center">
-    <img alt="Licencia" src="https://img.shields.io/github/license/melerodev/CustomDeathMessages?style=for-the-badge&color=blue&labelColor=141417">
-    <img alt="Última versión" src="https://img.shields.io/github/v/release/melerodev/CustomDeathMessages?include_prereleases&sort=semver&style=for-the-badge&label=VERSI%C3%93N&labelColor=141417">
+    <img alt="License" src="https://img.shields.io/github/license/melerodev/CustomDeathMessages?style=for-the-badge&color=blue&labelColor=141417">
+    <img alt="Latest version" src="https://img.shields.io/github/v/release/melerodev/CustomDeathMessages?include_prereleases&sort=semver&style=for-the-badge&label=VERSION&labelColor=141417">
     <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/melerodev/CustomDeathMessages/ci.yml?style=for-the-badge&labelColor=141417">
     <img alt="Paper" src="https://img.shields.io/badge/Paper%20%2F%20Folia-1.20.6%20%E2%86%92%2026.3-e74c3c?style=for-the-badge&labelColor=141417">
-    <a href="https://discord.gg/rMuWwZzCW2"><img alt="Discord" src="https://img.shields.io/badge/Discord-%C3%9Anete-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=141417"></a>
+    <a href="https://discord.gg/rMuWwZzCW2"><img alt="Discord" src="https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=141417"></a>
 </p>
 
 ---
 
-## Descripción
+## Description
 
-**CustomDeathMessages** reemplaza los mensajes de muerte de los jugadores. No se limita a "cambiar un par de mensajes":
-usa **plantillas configurables** con **placeholders**, mensajes **distintos para cada causa de muerte** y para cada tipo
-de mob, varias variantes elegidas al azar y **compatibilidad con plugins de traducción**.
+**CustomDeathMessages** replaces player death messages. It goes beyond "changing a couple of messages":
+it uses **configurable templates** with **placeholders**, **different messages for each death cause** and for each
+mob type, several randomly picked variants and **compatibility with translation plugins**.
 
-Construido sobre la plantilla [Minecraft-Plugin-Template](https://github.com/milkdrinkers/Minecraft-Plugin-Template).
+Built on top of [Minecraft-Plugin-Template](https://github.com/milkdrinkers/Minecraft-Plugin-Template).
 
-## Características
+## Features
 
-- 📝 **Plantillas configurables** en MiniMessage (y códigos legacy), con varias variantes aleatorias por clave.
-- ☠️ **Mensajes por causa de muerte**: caída, lava, ahogamiento, vacío, explosión… (todas las `DamageCause`).
-- 🗡️ **Asesinado por jugador** (con el arma, con su tooltip) y **por mob**, con mensajes específicos por tipo (`zombie`, `creeper`, `warden`…).
-- 🧩 **Placeholders**: víctima, asesino, tipo de asesino, arma, causa, mundo, coordenadas y el mensaje vanilla original; además **PlaceholderAPI** y **MiniPlaceholders**.
-- 🌐 **Compatibilidad con traducciones**:
-  - Las partes traducibles (nombre del mob, del arma, `<original>`, etiquetas `<lang:...>`) se envían como *translatable components*: cada cliente las ve en su idioma, y funcionan con plugins de traducción que usan el `GlobalTranslator` de Adventure.
-  - Modo `per-player-locale`: cada jugador recibe la plantilla de **su idioma** (sección `locales`).
-  - Evento de API `DeathMessageEvent` para que otros plugins (p. ej. de traducción) modifiquen o cancelen el mensaje.
-- 🙊 Modos `custom`, `vanilla` o `hidden`; respeta la gamerule `showDeathMessages`.
-- 🔄 `/customdeathmessages reload` sin reiniciar.
-- ⚡ Compatible con **Folia**.
+- 📝 **Configurable templates** in MiniMessage (and legacy codes), with several random variants per key.
+- ☠️ **Messages per death cause**: fall, lava, drowning, void, explosions… (every `DamageCause`).
+- 🗡️ **Killed by a player** (with the weapon and its tooltip) and **by a mob**, with specific messages per type (`zombie`, `creeper`, `warden`…).
+- 🧩 **Placeholders**: victim, killer, killer type, weapon, cause, world, coordinates and the original vanilla message; plus **PlaceholderAPI** and **MiniPlaceholders**.
+- 🌐 **Translation support**:
+  - Translatable parts (mob name, weapon name, `<original>`, `<lang:...>` tags) are sent as *translatable components*: each client sees them in their own language, and they work with translation plugins that use Adventure's `GlobalTranslator`.
+  - `per-player-locale` mode: every player gets the template in **their own language** (`locales` section).
+  - `DeathMessageEvent` API event so other plugins (e.g. translation plugins) can change or cancel the message.
+- 🙊 `custom`, `vanilla` or `hidden` modes; respects the `showDeathMessages` gamerule.
+- 🔄 `/customdeathmessages reload` without restarting.
+- ⚡ **Folia** supported.
 
-## Requisitos
+## Requirements
 
-- Servidor **Paper** o **Folia** de **1.20.6 a 26.3**.
-- **Java 21** (Minecraft 1.20.6 – 1.21.x) o **Java 25** (Minecraft 26.x).
-- No funciona en Spigot ni en versiones anteriores a 1.20.6.
-- Opcional: [PlaceholderAPI](https://modrinth.com/plugin/placeholderapi), [MiniPlaceholders](https://modrinth.com/plugin/miniplaceholders).
+- **Paper** or **Folia** server, **1.20.6 to 26.3**.
+- **Java 21** (Minecraft 1.20.6 – 1.21.x) or **Java 25** (Minecraft 26.x).
+- Does not run on Spigot or on versions older than 1.20.6.
+- Optional: [PlaceholderAPI](https://modrinth.com/plugin/placeholderapi), [MiniPlaceholders](https://modrinth.com/plugin/miniplaceholders).
 
-Versiones probadas: 1.20.6, 1.21.1, 1.21.4, 1.21.8, 1.21.11, 26.1.2, 26.2 y 26.3.
+Tested versions: 1.20.6, 1.21.1, 1.21.4, 1.21.8, 1.21.11, 26.1.2, 26.2 and 26.3.
 
-## Instalación
+## Installation
 
-1. Descarga el `.jar` desde [Releases](https://github.com/melerodev/CustomDeathMessages/releases) (o compílalo, ver abajo).
-2. Cópialo en `plugins/` y reinicia el servidor.
-3. Edita `plugins/CustomDeathMessages/config.yml` y ejecuta `/customdeathmessages reload`.
+1. Download the `.jar` from [Releases](https://github.com/melerodev/CustomDeathMessages/releases) (or build it, see below).
+2. Put it in `plugins/` and restart the server.
+3. Edit `plugins/CustomDeathMessages/config.yml` and run `/customdeathmessages reload`.
 
-## Comandos
+## Commands
 
-| Comando                        | Descripción                              | Permiso                                     |
+| Command                        | Description                              | Permission                                  |
 |--------------------------------|------------------------------------------|---------------------------------------------|
-| `/customdeathmessages`         | Información (modo, plantillas, idiomas)  | `customdeathmessages.command` (OP)          |
-| `/customdeathmessages reload`  | Recarga `config.yml` y los idiomas       | `customdeathmessages.command.reload` (OP)   |
+| `/customdeathmessages`         | Info (mode, templates, locales)          | `customdeathmessages.command` (OP)          |
+| `/customdeathmessages reload`  | Reloads `config.yml` and the language files | `customdeathmessages.command.reload` (OP) |
 
-Alias: `/cdm`, `/deathmessages`.
+Aliases: `/cdm`, `/deathmessages`.
 
 ## Placeholders
 
-| Placeholder             | Valor                                                          |
+| Placeholder             | Value                                                          |
 |-------------------------|----------------------------------------------------------------|
-| `<victim>` / `<player>` | Nombre de quien muere                                          |
-| `<victim_displayname>`  | Nombre mostrado de la víctima                                  |
-| `<killer>`              | Asesino: nombre del jugador, nombre personalizado o tipo de mob (traducido) |
-| `<killer_type>`         | Tipo de entidad del asesino (traducido)                        |
-| `<weapon>`              | Objeto en la mano del asesino, con tooltip (o `empty-hand`)    |
-| `<cause>`               | Causa de muerte (`fall`, `lava`…)                              |
-| `<world>` `<x>` `<y>` `<z>` | Lugar de la muerte                                         |
-| `<original>`            | El mensaje vanilla (traducido en el idioma de cada cliente)   |
-| `<lang:clave>`          | Cualquier clave de traducción (MiniMessage)                    |
-| `%...%`                 | Cualquier placeholder de PlaceholderAPI (de la víctima)        |
+| `<victim>` / `<player>` | Name of the player who died                                    |
+| `<victim_displayname>`  | Victim's display name                                          |
+| `<killer>`              | Killer: player name, custom name or mob type (translated)      |
+| `<killer_type>`         | Killer's entity type (translated)                              |
+| `<weapon>`              | Item in the killer's hand, with tooltip (or `empty-hand`)      |
+| `<cause>`               | Death cause (`fall`, `lava`…)                                  |
+| `<world>` `<x>` `<y>` `<z>` | Death location                                             |
+| `<original>`            | The vanilla message (translated into each client's language)  |
+| `<lang:key>`            | Any translation key (MiniMessage)                              |
+| `%...%`                 | Any PlaceholderAPI placeholder (of the victim)                 |
 
-PlaceholderAPI: `%customdeathmessages_deaths%` (muertes totales del jugador).
+PlaceholderAPI: `%customdeathmessages_deaths%` (the player's total deaths).
 
-## Cómo se elige el mensaje
+## How a message is picked
 
-Para cada muerte se busca la plantilla más específica, en este orden:
+For every death the most specific template is used, in this order:
 
-1. Asesinado por un jugador → `messages.player`
-2. Asesinado por un mob → `mob-messages.<tipo>` (p. ej. `creeper`)
-3. Causa de muerte → `messages.<causa>` (p. ej. `fall`)
-4. Cualquier mob → `messages.mob`
+1. Killed by a player → `messages.player`
+2. Killed by a mob → `mob-messages.<type>` (e.g. `creeper`)
+3. Death cause → `messages.<cause>` (e.g. `fall`)
+4. Any mob → `messages.mob`
 5. `messages.default`
 
-Si una clave tiene varias líneas, se elige una al azar. Si no hay ninguna, se mantiene el mensaje vanilla
-(`fallback-to-vanilla: true`) o la muerte es silenciosa.
+If a key has several lines, one is picked at random. If nothing matches, the vanilla message is kept
+(`fallback-to-vanilla: true`) or the death is silent.
 
-## Mensajes por idioma
+## Messages per language
 
 ```yaml
 per-player-locale: true
 locales:
-  es:            # o es_es, es_mx… (el idioma del cliente)
+  es:            # or es_es, es_mx… (the client language)
     messages:
       fall:
         - <red>☠ <white><victim> <gray>olvidó que no sabe volar
@@ -101,21 +101,21 @@ locales:
         - <red>☠ <white><victim> <gray>abrazó a un <green>creeper
 ```
 
-Los jugadores cuyo idioma no esté en `locales` reciben `messages`/`mob-messages`.
+Players whose language is not in `locales` get `messages`/`mob-messages`.
 
-## API para desarrolladores
+## Developer API
 
 ```java
 @EventHandler
 public void onDeathMessage(DeathMessageEvent event) {
-    Player viewer = event.getViewer(); // null si es un broadcast a todos
+    Player viewer = event.getViewer(); // null when it is a broadcast to everyone
     event.setMessage(myTranslator.translate(event.getMessage(), viewer));
-    // event.setCancelled(true) para no enviarlo
+    // event.setCancelled(true) to not send it
 }
 ```
 
 <details>
-<summary><code>config.yml</code> por defecto (resumido)</summary>
+<summary>Default <code>config.yml</code> (summarized)</summary>
 
 ```yaml
 # custom = use the messages below, vanilla = keep Minecraft's messages, hidden = no death messages
@@ -164,27 +164,27 @@ language: en_US
 
 </details>
 
-## Compilar
+## Building
 
 ```bash
 ./gradlew build
 ```
 
-El jar queda en `paper/build/libs/`. Para probarlo en un servidor local:
+The jar ends up in `paper/build/libs/`. To try it on a local server:
 
 ```bash
 ./gradlew runServer                      # Paper 1.21.11
-./gradlew runServer -PmcVersion=1.20.6   # cualquier otra versión
+./gradlew runServer -PmcVersion=1.20.6   # any other version
 ```
 
-## Soporte
+## Support
 
-¿Dudas, sugerencias o problemas? Únete a nuestro Discord:
+Questions, suggestions or problems? Join our Discord:
 
-<a href="https://discord.gg/rMuWwZzCW2"><img alt="Únete a nuestro Discord" src="docs/assets/discord.png" width="300"></a>
+<a href="https://discord.gg/rMuWwZzCW2"><img alt="Join our Discord" src="docs/assets/discord.png" width="300"></a>
 
-También puedes abrir una [issue](https://github.com/melerodev/CustomDeathMessages/issues).
+You can also open an [issue](https://github.com/melerodev/CustomDeathMessages/issues).
 
-## Licencia
+## License
 
-[MIT No Attribution](LICENSE). Basado en [milkdrinkers/Minecraft-Plugin-Template](https://github.com/milkdrinkers/Minecraft-Plugin-Template).
+[MIT No Attribution](LICENSE). Based on [milkdrinkers/Minecraft-Plugin-Template](https://github.com/milkdrinkers/Minecraft-Plugin-Template).
