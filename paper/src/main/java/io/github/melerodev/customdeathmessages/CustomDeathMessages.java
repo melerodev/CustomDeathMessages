@@ -10,7 +10,7 @@ import io.github.melerodev.customdeathmessages.translation.TranslationHandler;
 import io.github.melerodev.customdeathmessages.updatechecker.UpdateHandler;
 import io.github.melerodev.customdeathmessages.utility.Logger;
 import io.github.milkdrinkers.colorparser.paper.ColorParser;
-import io.github.milkdrinkers.wordweaver.Translation;
+import io.github.melerodev.customdeathmessages.translation.Translation;
 import org.bukkit.Bukkit;
 import org.jetbrains.annotations.NotNull;
 

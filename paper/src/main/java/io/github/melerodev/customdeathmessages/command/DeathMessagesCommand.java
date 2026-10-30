@@ -5,7 +5,7 @@ import dev.jorel.commandapi.executors.CommandArguments;
 import io.github.melerodev.customdeathmessages.CustomDeathMessages;
 import io.github.melerodev.customdeathmessages.utility.Cfg;
 import io.github.milkdrinkers.colorparser.paper.ColorParser;
-import io.github.milkdrinkers.wordweaver.Translation;
+import io.github.melerodev.customdeathmessages.translation.Translation;
 import org.bukkit.command.CommandSender;
 
 import static io.github.melerodev.customdeathmessages.command.CommandHandler.BASE_PERM;
